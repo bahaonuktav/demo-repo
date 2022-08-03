@@ -1,0 +1,31 @@
+#given an array, return the majority number
+
+
+#solution1 
+#with hashmap
+#time complexity = O(n), space complexity = O(n)
+def majority_find(arr):
+    hash_map = {}
+    max_number = 0
+    for i in arr:
+        hash_map[i] = hash_map.get(i,0) + 1
+        if hash_map[i] > max_number:
+            max_number = i
+
+    return max_number
+
+#solution2
+#boyer moore algorithm
+#time complexity = O(n), space complexity = O(1)
+def majority_finder2(arr):
+    number = 0
+    repetition = 0
+    for i in arr1:
+        if repetition == 0:
+            number = i
+            repetition+=1
+        if number == i:
+            repetition+=1
+        if repetition !=0 and number!=i:
+            repetition-=1
+    return number
