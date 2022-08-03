@@ -1,0 +1,10 @@
+#given non empty array of integers, every element appears twice except for one, find that single one.
+#space complexity = O(1), time complexity = O(n)
+
+def single_number():
+    mylist = [1,2,1,2,3,4]
+    result = 0
+    for num in mylist:
+        result = num ^ result
+    return result
+print(single_number())
