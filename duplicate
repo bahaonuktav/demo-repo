@@ -15,6 +15,7 @@ def duplicate_finder(arr):
     return False
 
 
+
 #solution2
 #space complexity = O(n), time complexity = O(n)
 def duplicateFinder2(arr):
@@ -22,7 +23,14 @@ def duplicateFinder2(arr):
     if len(arr) == len(a):
         return False
     return True
-    
+
+
+#solution2(alternate)
+#space complexity = O(n), time complexity = O(n)
+def duplicate_finder2_alternate(arr):
+    return len(arr) != len(set(arr))
+
+
 
 #solution3
 #space complexity = O(1), time complexity = O(n)
